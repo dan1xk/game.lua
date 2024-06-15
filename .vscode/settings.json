@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "Lua.diagnostics.globals": ["love"],
+  "Lua.diagnostics.disable": ["lowercase-global"]
+}
