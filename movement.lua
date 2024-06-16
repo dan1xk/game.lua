@@ -1,7 +1,7 @@
 local Vector2 = require("utils.vector2")
 
 local function movement(dt, player, playerSpeed, playerSize, w, h)
-  local movement = Vector2.new(0, 0)
+  local movement = Vector2:new(0, 0)
 
   if love.keyboard.isDown("w", "up") then movement.y = movement.y - 1 end
   if love.keyboard.isDown("s", "down") then movement.y = movement.y + 1 end
@@ -10,7 +10,7 @@ local function movement(dt, player, playerSpeed, playerSize, w, h)
 
   movement = Vector2.normalize(movement)
 
-  local nextPosition = Vector2.new(player.x, player.y):add(Vector2.new(movement.x * playerSpeed * dt,
+  local nextPosition = Vector2:new(player.x, player.y):add(Vector2:new(movement.x * playerSpeed * dt,
     movement.y * playerSpeed * dt))
 
   -- Collision

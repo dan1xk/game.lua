@@ -6,6 +6,8 @@ local currentScreen = "menu"
 
 function love.load()
     love.window.setTitle("Lua_game")
+    love.mouse.setVisible(false)
+
     -- love.window.setFullscreen(true, "desktop")
     love.graphics.setBackgroundColor(0.1, 0.1, 0.1)
 
