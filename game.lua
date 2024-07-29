@@ -52,7 +52,7 @@ function drawPlayerCannon()
   love.graphics.setColor(1, 1, 1)
 end
 
-function drawPlayerInfo()
+function drawDebugInfos()
   local playerInfo = {
     "dx: " .. dx,
     "dy: " .. dy,
@@ -107,7 +107,7 @@ end
 function game.draw()
   drawPlayer()
   drawPlayerCannon()
-  drawPlayerInfo()
+  drawDebugInfos()
   drawBullets()
   drawPlayerCursor()
 end
