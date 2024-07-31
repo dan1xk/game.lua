@@ -14,7 +14,6 @@ local shootTimer         = shootInterval
 local playerSpeed        = 500
 local previousMouseState = false
 local mousePosition      = Vector2:new(0, 0)
-local cannonAngle        = 0
 
 function bulletSound()
   bulletSnd = love.audio.newSource("sounds/gun.mp3", "static")
@@ -50,6 +49,7 @@ function drawPlayerCannon()
   love.graphics.rectangle("fill", offsetX, offsetY, w, h)
   love.graphics.pop()
   love.graphics.setColor(1, 1, 1)
+  love.graphics.print("cannonAngle: " .. cannonAngle, 10, 160 + 10)
 end
 
 function drawDebugInfos()
@@ -60,7 +60,6 @@ function drawDebugInfos()
     "Player Y: " .. player.y,
     "Mouse X: " .. mousePosition.x,
     "Mouse Y: " .. mousePosition.y,
-    "Cannon Angle: " .. cannonAngle,
     "YY: " .. mousePosition.y - player.y,
     "XX: " .. mousePosition.x - player.x
   }
